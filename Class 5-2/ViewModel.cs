@@ -22,18 +22,6 @@ namespace Class_5_2
             }
         }
 
-        private void UpdateFilteredItems()
-        {
-            if (_items == null || String.IsNullOrEmpty(_filterText))
-            {
-                FilteredItems = new ObservableCollection<string>(_items);
-            }
-            else
-            {
-                FilteredItems = new ObservableCollection<string>(_items.Where(i => i.ToUpper().Contains(_filterText.ToUpper())));
-            }
-        }
-
         // User input setup
         private String _userInput;
         public String UserInput
